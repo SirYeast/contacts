@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contacts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="assets/style/index.css">
+    <script src="assets/script/index.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <h1>My Contacts</h1>
+        <form>
+            <input type="text" placeholder="Contact info (name, city, email)">
+            <input type="button" value="Add">
+        </form>
+        <p id="validation-message">Secret message</p>
+        <section id="contact-grid">
+            <template>
+                <div class="contact" onclick="deleteContact(this)">
+                    <p><span class="label">Name:</span> <span class="value name"></span></p>
+                    <p><span class="label">City:</span> <span class="value city"></span></p>
+                    <p><span class="label">Email:</span> <span class="value email"></span></p>
+                </div>
+            </template>
+        </section>
+        <p id="contact-count">Saved Contacts: 0</p>
+    </main>
+</body>
+
+</html>

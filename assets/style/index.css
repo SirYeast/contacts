@@ -1,0 +1,94 @@
+@import "reset.css";
+
+body {
+    background-color: #191919;
+    color: #fff;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: min(100%, 960px);
+    margin-inline: auto;
+    padding-block: 50px;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+form {
+    display: flex;
+    gap: 10px;
+    margin-block: 20px;
+}
+
+input {
+    height: 50px;
+    border-radius: 10px;
+}
+
+input[type="text"] {
+    width: 400px;
+    padding-inline: 10px;
+    border: 1px solid rgb(255 255 255 / 0.5);
+    background-color: transparent;
+}
+
+input[type="button"] {
+    width: 100px;
+    background-color: #1b9a4c;
+    text-align: center;
+    user-select: none;
+}
+
+#validation-message {
+    visibility: hidden;
+    color: #ff4343;
+    margin-bottom: 20px;
+}
+
+#contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 10px;
+    width: 950px;
+}
+
+.contact {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgb(0 0 0 / 0.2);
+    background-color: #282828;
+    transition: background-color 0.2s;
+    cursor: pointer;
+}
+
+.contact:hover {
+    background-color: #ac3838;
+}
+
+.contact .value {
+    font-size: 14px;
+}
+
+.contact > *:not(:last-child) {
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgb(255 255 255 / 0.2);
+}
+
+.label {
+    font-weight: 600;
+}
+
+#contact-count {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: #da2f57;
+}
